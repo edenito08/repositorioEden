@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <title>Booking Eden</title>
+</head>
+
+<body onload="cargar()">
+    <h2> Reserva hotelera</h2> <br>
+    <div id="formulario">
+        <form id="form" name="form" method="get">
+            <div class="form-row">
+                <div class="col-auto">
+                    <div class="controls">
+                        <p>Hotel de destino: <input class="form-control" type="text" name="hotel" id="hotel">
+
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="controls">
+                        Fecha de entrada<input class="form-control" type="date" id="entrada" value="" />
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="controls">
+                        Número de noches:
+
+                        <select class="form-control" id="dropdown">
+                            <option value="4">4 noches</option>
+                            <option value="7">7 noches</option>
+                            <option value="10">10 noches</option>
+                            <option value="14">14 noches</option>
+                            <option disabled>──────────</option>
+                            <option value="1">1 noche</option>
+                            <option value="2">2 noches</option>
+                            <option value="3">3 noches</option>
+                            <option value="4">4 noches</option>
+                            <option value="5">5 noches</option>
+                            <option value="6">6 noches</option>
+                            <option value="7">7 noches</option>
+                            <option value="8">8 noches</option>
+                            <option value="9">9 noches</option>
+                            <option value="10">10 noches</option>
+                            <option value="11">11 noches</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="controls">
+                        Habitaciones: <input id="numHab" class="form-control" type="number" min="1" placeholder="1" disabled />
+
+                    </div>
+
+                    <div id="mas"><button type="button" onclick="personas()">Añadir habitación</button>
+
+                    </div>
+                </div>
+                <button type="button" onclick="resumir()" value="Buscar">Buscar</button>
+            </div>
+        </form>
+    </div>
+    <div id="habitaciones"></div>
+    <script src="js/procesar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
